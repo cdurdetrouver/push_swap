@@ -1,0 +1,11 @@
+# Ignore les fichiers .o
+*.o
+
+# Ignore les fichiers .a
+*.a
+
+push_swap
+
+push_swap_visualizer/
+tester/
+.vscode/
