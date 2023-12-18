@@ -30,5 +30,9 @@ void	free_split(char **split)
 
 	i = 0;
 	while (split[i])
-		free(split[i++]);
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
 }
