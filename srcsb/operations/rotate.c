@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbazart <gabriel.bazart@gmail.com>         +#+  +:+       +#+        */
+/*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 12:56:17 by gbazart           #+#    #+#             */
-/*   Updated: 2023/12/17 15:40:11 by gbazart          ###   ########.fr       */
+/*   Updated: 2023/12/18 13:24:47 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static void	rotate(t_stack **stack)
 	t_stack	*tmp;
 	t_stack	*last;
 
+	if (!*stack)
+		return ;
 	tmp = *stack;
 	*stack = (*stack)->next;
 	last = ft_last(*stack);
