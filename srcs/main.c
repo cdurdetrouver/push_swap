@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbazart <gabriel.bazart@gmail.com>         +#+  +:+       +#+        */
+/*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 13:17:48 by gbazart           #+#    #+#             */
-/*   Updated: 2023/12/17 15:51:29 by gbazart          ###   ########.fr       */
+/*   Updated: 2023/12/18 15:43:58 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_arg_to_stack(t_stack **stack, char **argv, int flag)
 	long	nbr;
 	int		i;
 
-	i = 0;
+	i = 1;
 	while (argv[i])
 	{
 		if (!ft_isnumeric(argv[i]))
@@ -45,7 +45,7 @@ int	main(int argc, char **argv)
 		return (ft_printf("Error\n"), 1);
 	else if (argc == 2)
 		argv = ft_split_argv(argv[1], ' ');
-	ft_arg_to_stack(&stack_a, argv + 1, argc == 2);
+	ft_arg_to_stack(&stack_a, argv, argc == 2);
 	stack_b = NULL;
 	if (!is_sorted_stack(&stack_a))
 	{
