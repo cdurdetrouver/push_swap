@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gbazart <gabriel.bazart@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 13:17:48 by gbazart           #+#    #+#             */
-/*   Updated: 2023/12/18 15:43:58 by gbazart          ###   ########.fr       */
+/*   Updated: 2023/12/19 16:35:29 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,9 @@ int	main(int argc, char **argv)
 
 	stack_a = NULL;
 	stack_b = NULL;
-	if (argc == 1 || (argc == 2 && !argv[1][0]))
+	if (argc == 1)
+		return (0);
+	else if (argc == 2 && !argv[1][0])
 		return (ft_printf("Error\n"), 1);
 	else if (argc == 2)
 		argv = ft_split_argv(argv[1], ' ');

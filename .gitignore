@@ -5,6 +5,8 @@
 *.a
 
 push_swap
+checker
+checker_linux
 
 push_swap_visualizer/
 tester/
