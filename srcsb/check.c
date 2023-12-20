@@ -6,7 +6,7 @@
 /*   By: gbazart <gabriel.bazart@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 14:26:42 by gbazart           #+#    #+#             */
-/*   Updated: 2023/12/17 16:36:12 by gbazart          ###   ########.fr       */
+/*   Updated: 2023/12/20 13:55:40 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_sub_check(char *line, t_stack **a, t_stack **b)
 	else if (ft_strncmp(line, "rrr\n", 4) == 0 && line[4] == '\0')
 		rrr(a, b);
 	else
-		print_error();
+		print_error(a, b, line);
 	return (get_next_line(0));
 }
 

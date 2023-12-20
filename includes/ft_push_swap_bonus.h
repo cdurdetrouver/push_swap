@@ -6,7 +6,7 @@
 /*   By: gbazart <gabriel.bazart@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 12:50:35 by gbazart           #+#    #+#             */
-/*   Updated: 2023/12/17 15:58:39 by gbazart          ###   ########.fr       */
+/*   Updated: 2023/12/20 13:55:59 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,8 @@ void				ft_stackadd_back(t_stack **stack, int nbr);
 int					error_repetition(t_stack *a, int nbr);
 void				error_free(t_stack **a, char **split, int flag);
 t_stack				*ft_last(t_stack *stack);
-void				print_error(void);
+void				print_error(t_stack **stack_a, t_stack **stack_b,
+						char *line);
 
 // FREE
 void				free_stack(t_stack **stack);
